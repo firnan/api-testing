@@ -1,0 +1,53 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "errorCode",
+        "statusCode",
+        "message",
+        "timestamp"
+    ],
+    "properties": {
+        "errorCode": {
+            "type": "string",
+            "default": "",
+            "title": "The errorCode Schema",
+            "examples": [
+                "ER-03"
+            ]
+        },
+        "statusCode": {
+            "type": "integer",
+            "default": 0,
+            "title": "The statusCode Schema",
+            "examples": [
+                400
+            ]
+        },
+        "message": {
+            "type": "string",
+            "default": "",
+            "title": "The message Schema",
+            "examples": [
+                "you must specify data for firstname, lastName, age, occupation, nationality, hobbies (at least 1), and gender"
+            ]
+        },
+        "timestamp": {
+            "type": "string",
+            "default": "",
+            "title": "The timestamp Schema",
+            "examples": [
+                "2022-08-11T03:50:59.189413"
+            ]
+        }
+    },
+    "examples": [{
+        "errorCode": "ER-03",
+        "statusCode": 400,
+        "message": "you must specify data for firstname, lastName, age, occupation, nationality, hobbies (at least 1), and gender",
+        "timestamp": "2022-08-11T03:50:59.189413"
+    }]
+}

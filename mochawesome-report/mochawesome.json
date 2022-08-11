@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-08-11T05:06:48.430Z",
+    "end": "2022-08-11T05:06:48.485Z",
+    "duration": 55,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3c8e5c59-e12e-4239-90da-87c315ce7663",
+      "title": "",
+      "fullFile": "/Users/firnasholihuda/Documents/Mini Bootcamp QA Automation/task-week3/testcases/update-user.js",
+      "file": "/testcases/update-user.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9eb491fc-0920-4d98-9acc-ffb99a7dfdcf",
+          "title": "Update user for API Test",
+          "fullFile": "/Users/firnasholihuda/Documents/Mini Bootcamp QA Automation/task-week3/testcases/update-user.js",
+          "file": "/testcases/update-user.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Update Ocuppation and Nationality user with valid data",
+              "fullTitle": "Update user for API Test Update Ocuppation and Nationality user with valid data",
+              "timedOut": false,
+              "duration": 30,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const idUser = 'f2878d40-ca76-4397-a5bb-a8820e8cfb5d';\nlet response = await api.putUser(requestBody);\nlet bodyData = response.body;\nexpect(response.status).to.equal(200);\nexpect(bodyData.id).to.equal(idUser);\nexpect(bodyData.id).not.to.be.null;\n// console.log(response.body['occupation']);\n// console.log(response.body['nationality']);\nexpect(response.body).to.be.contain({occupation: 'QA Automation Engineer'});\nexpect(response.body).to.be.contain({nationality: 'Inggris'});\nexpect(response.body).has.jsonSchema(jsonSchema);\nfor(let index = 0; index < bodyData.data; index += 1) {\n    expect(bodyData.data[index].id.toLowerCase()).to.equal(idUser.toLowerCase());\n}",
+              "err": {},
+              "uuid": "c3ecd376-8dbd-4723-a659-7d56a8a1fc2d",
+              "parentUUID": "9eb491fc-0920-4d98-9acc-ffb99a7dfdcf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Update Age into 0 will return 400",
+              "fullTitle": "Update user for API Test Update Age into 0 will return 400",
+              "timedOut": false,
+              "duration": 6,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const idUser = 'f2878d40-ca76-4397-a5bb-a8820e8cfb5d';\nlet response = await api.putUser(requestBody2);\nlet bodyData = response.body;\nexpect(response.status).to.equal(400);\n// console.log(response.body['message']);\n// console.log(response.body['errorCode']);\nexpect(response.body).to.be.contain({message: 'you must specify data for firstname, lastName, age, occupation, nationality, hobbies (at least 1), and gender'});\nexpect(response.body).to.be.contain({errorCode: 'ER-03'});\nexpect(response.body).has.jsonSchema(jsonSchema2);\nfor(let index = 0; index < bodyData.data; index += 1) {\n    expect(bodyData.data[index]).to.equal(idUser);\n}",
+              "err": {},
+              "uuid": "ae5ab2d2-4b31-404a-9fc2-8be6730a11a3",
+              "parentUUID": "9eb491fc-0920-4d98-9acc-ffb99a7dfdcf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Update Hobbies into empty array will return 400",
+              "fullTitle": "Update user for API Test Update Hobbies into empty array will return 400",
+              "timedOut": false,
+              "duration": 7,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const idUser = 'f2878d40-ca76-4397-a5bb-a8820e8cfb5d';\nlet response = await api.putUser(requestBody3);\nlet bodyData = response.body;\nexpect(response.status).to.equal(400);\nexpect(response.body).to.be.contain({message: 'you must specify data for firstname, lastName, age, occupation, nationality, hobbies (at least 1), and gender'});\nexpect(response.body).to.be.contain({errorCode: 'ER-03'});\nexpect(response.body).has.jsonSchema(jsonSchema2);\nfor(let index = 0; index < bodyData.data; index += 1) {\n    expect(bodyData.data[index]).to.equal(idUser);\n}",
+              "err": {},
+              "uuid": "b743016c-bb90-40db-8408-4c037d76ce27",
+              "parentUUID": "9eb491fc-0920-4d98-9acc-ffb99a7dfdcf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Update ID into null will return 404",
+              "fullTitle": "Update user for API Test Update ID into null will return 404",
+              "timedOut": false,
+              "duration": 7,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const idUser = 'f2878d40-ca76-4397-a5bb-a8820e8cfb5d';\nlet response = await api.putUser(requestBody4);\nlet bodyData = response.body;\nexpect(response.status).to.equal(404);\nexpect(response.body).to.be.contain({message: 'user not found'});\nexpect(response.body).to.be.contain({errorCode: 'ER-01'});\nexpect(response.body).has.jsonSchema(jsonSchema2);\nfor(let index = 0; index < bodyData.data; index += 1) {\n    expect(bodyData.data[index]).to.equal(idUser);\n}",
+              "err": {},
+              "uuid": "ca58d1b3-4ca3-4ff1-a3c7-8bd76c2176e5",
+              "parentUUID": "9eb491fc-0920-4d98-9acc-ffb99a7dfdcf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c3ecd376-8dbd-4723-a659-7d56a8a1fc2d",
+            "ae5ab2d2-4b31-404a-9fc2-8be6730a11a3",
+            "b743016c-bb90-40db-8408-4c037d76ce27",
+            "ca58d1b3-4ca3-4ff1-a3c7-8bd76c2176e5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 50,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.0.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
