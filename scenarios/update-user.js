@@ -10,6 +10,14 @@ const testcase = {
     }
 };
 
+const testcase2 = {
+    description: "Create user for API Test",
+    positive: {
+        case1 : "Create user"
+    }
+};
+
 module.exports = {
-    testcase
+    testcase,
+    testcase2
 }

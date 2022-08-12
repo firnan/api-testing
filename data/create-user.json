@@ -3,10 +3,12 @@
     "firstName":"Firnan",
     "lastName":"Sholihuda",
     "age":26,
-    "occupation":"QA Engineer",
-    "nationality":"Indonesia",
-    "hobbies":[],
+    "occupation":"QA Automation Engineer",
+    "nationality":"Inggris",
+    "hobbies": [
+      "Football"
+    ],
     "gender":"MALE",
     "createdDate":"2022-08-10T01:19:40.062663",
     "updatedDate":null
-}
+  }

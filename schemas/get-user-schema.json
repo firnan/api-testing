@@ -1,0 +1,181 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "data",
+        "status"
+    ],
+    "properties": {
+        "data": {
+            "type": "array",
+            "default": [],
+            "title": "The data Schema",
+            "items": {
+                "type": "object",
+                "default": {},
+                "title": "A Schema",
+                "required": [
+                    "id",
+                    "firstName",
+                    "lastName",
+                    "age",
+                    "occupation",
+                    "nationality",
+                    "hobbies",
+                    "gender",
+                    "createdDate",
+                    "updatedDate"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The id Schema",
+                        "examples": [
+                            "string"
+                        ]
+                    },
+                    "firstName": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The firstName Schema",
+                        "examples": [
+                            "string"
+                        ]
+                    },
+                    "lastName": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The lastName Schema",
+                        "examples": [
+                            "string"
+                        ]
+                    },
+                    "age": {
+                        "type": "integer",
+                        "default": 0,
+                        "title": "The age Schema",
+                        "examples": [
+                            0
+                        ]
+                    },
+                    "occupation": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The occupation Schema",
+                        "examples": [
+                            "string"
+                        ]
+                    },
+                    "nationality": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The nationality Schema",
+                        "examples": [
+                            "string"
+                        ]
+                    },
+                    "hobbies": {
+                        "type": "array",
+                        "default": [],
+                        "title": "The hobbies Schema",
+                        "items": {
+                            "type": "string",
+                            "default": "",
+                            "title": "A Schema",
+                            "examples": [
+                                "string"
+                            ]
+                        },
+                        "examples": [
+                            [
+                                "string"]
+                        ]
+                    },
+                    "gender": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The gender Schema",
+                        "examples": [
+                            "MALE"
+                        ]
+                    },
+                    "createdDate": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The createdDate Schema",
+                        "examples": [
+                            "2022-08-12T06:08:17.430Z"
+                        ]
+                    },
+                    "updatedDate": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The updatedDate Schema",
+                        "examples": [
+                            "2022-08-12T06:08:17.430Z"
+                        ]
+                    }
+                },
+                "examples": [{
+                    "id": "string",
+                    "firstName": "string",
+                    "lastName": "string",
+                    "age": 0,
+                    "occupation": "string",
+                    "nationality": "string",
+                    "hobbies": [
+                        "string"
+                    ],
+                    "gender": "MALE",
+                    "createdDate": "2022-08-12T06:08:17.430Z",
+                    "updatedDate": "2022-08-12T06:08:17.430Z"
+                }]
+            },
+            "examples": [
+                [{
+                    "id": "string",
+                    "firstName": "string",
+                    "lastName": "string",
+                    "age": 0,
+                    "occupation": "string",
+                    "nationality": "string",
+                    "hobbies": [
+                        "string"
+                    ],
+                    "gender": "MALE",
+                    "createdDate": "2022-08-12T06:08:17.430Z",
+                    "updatedDate": "2022-08-12T06:08:17.430Z"
+                }]
+            ]
+        },
+        "status": {
+            "type": "string",
+            "default": "",
+            "title": "The status Schema",
+            "examples": [
+                "string"
+            ]
+        }
+    },
+    "examples": [{
+        "data": [{
+            "id": "string",
+            "firstName": "string",
+            "lastName": "string",
+            "age": 0,
+            "occupation": "string",
+            "nationality": "string",
+            "hobbies": [
+                "string"
+            ],
+            "gender": "MALE",
+            "createdDate": "2022-08-12T06:08:17.430Z",
+            "updatedDate": "2022-08-12T06:08:17.430Z"
+        }],
+        "status": "string"
+    }]
+}
