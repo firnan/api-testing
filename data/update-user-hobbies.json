@@ -1,12 +1,12 @@
 {
-    "id":"2ed60d6e-1534-4f67-8a26-1a06ed892092",
-    "firstName":"Firnan",
-    "lastName":"Sholihuda",
-    "age":26,
-    "occupation":"QA Engineer",
-    "nationality":"Indonesia",
-    "hobbies":[],
-    "gender":"MALE",
-    "createdDate":"2022-08-10T01:19:40.062663",
-    "updatedDate":null
-}
+    "id": "292d1232-15ee-44db-bec8-333ec6f0aed9",
+    "firstName": "Firnan",
+    "lastName": "Sholihuda",
+    "age": 26,
+    "occupation": "QA Engineer",
+    "nationality": "Indonesia",
+    "hobbies": [],
+    "gender": "MALE",
+    "createdDate": "2022-08-19T23:49:36.533644",
+    "updatedDate": null
+  }

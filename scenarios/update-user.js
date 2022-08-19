@@ -1,19 +1,19 @@
 const testcase = {
     description: "Update user for API Test",
     positive: {
-        case1 : "Update Ocuppation and Nationality user with valid data"
+        case1 : "[@update] Update Ocuppation and Nationality user with valid data"
     },
     negative: {
-        case1: "Update Age into 0 will return 400",
-        case2: "Update Hobbies into empty array will return 400",
-        case3: "Update ID into null will return 404"
+        case1: "[@updateage]Update Age into 0 will return 400",
+        case2: "[@updatehobi] Update Hobbies into empty array will return 400",
+        case3: "[@updateid] Update ID into null will return 404"
     }
 };
 
 const testcase2 = {
     description: "Create user for API Test",
     positive: {
-        case1 : "Create user"
+        case1 : "[@create] Create user"
     }
 };
 
